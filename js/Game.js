@@ -13,13 +13,10 @@ class Game {
   this.activePhrase= null;
 }
 
-/*getRandomPhrase(): this method randomly retrieves one of the phrases stored in the phrases array and returns it.
- */
  getRandomPhrase() {
   let randPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)];
   return randPhrase;
 }
-
    startGame() {
     const newPhrase = new Phrase(this.getRandomPhrase().phrase); //create a selected phrase
     this.activePhrase = newPhrase; //store the selected phrase in activePhrase property
