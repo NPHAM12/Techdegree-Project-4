@@ -10,18 +10,6 @@ class Game {
     }, {
     phrase: "1 2 3",
     }];
-
-  // [{
-  //   phrase: "a bird in the hand is worth two in the bush",
-  //   }, {
-  //   phrase: "six of one half a dozen of the other",
-  //   }, {
-  //   phrase: "no good deed goes unpunished",
-  //   }, {
-  //   phrase: "all publicity is good publicity",
-  //   }, {
-  //   phrase: "failing to plan is planning to fail",
-  //   }];
   this.activePhrase= null;
 }
 
