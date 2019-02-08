@@ -3,8 +3,19 @@ class Phrase {
     this.phrase = phrase;
   }
   
-  addPhraseToDisplay() {
-    $('#phrase ul').append($('<h3>Add LI here</h3>')); //try to add a new element h3 inside the ul here
-    $('div #phrase').append($('<p>Add P here/p>')); //try to add a new element p outside the ul here
+    addPhraseToDisplay() {
+    for (let i in this.phrase) {
+      const newLi = $('<li><li>'); //create a new li element for each character in string
+      if (this.phrase[i] === " ") {
+        console.log("space");
+        newLi.addClass(`hide space`);
+      } else {
+        console.log("letter");
+        newLi.addClass(`hide letter`);
+      }
+      newLi.text(this.phrase[i]);
+      console.log("Add li: " );
+      $('#phrase ul').append(newLi); // add the child (li) to the parent (ul)
+    }
   }
 }
