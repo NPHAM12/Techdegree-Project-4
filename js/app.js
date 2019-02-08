@@ -9,3 +9,9 @@
          and not use the chosen or wrong CSS classes.
     Reset all of the heart images (i.e. the player's lives) in the scoreboard at the bottom
          of the gameboard to display the liveHeart.png image.*/
+
+
+//*Test startGame()
+const game = new Game();
+game.startGame();
+console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
