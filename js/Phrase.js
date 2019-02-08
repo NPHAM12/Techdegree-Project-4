@@ -1,7 +1,3 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * NGUYEN PHAM
- * Phrase.js */
 class Phrase {
   constructor(phrase) {
     this.phrase = phrase;
