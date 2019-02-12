@@ -23,8 +23,6 @@ class Game {
       }];
 
     /*  activePhrase: This is the Phrase object that’s currently in play. The initial value is null.
-                    Within the startGame() method, this property will be set to the Phrase object returned
-                                                              from a call to the getRandomPhrase() method.*/
     this.activePhrase = null;
   }
 
@@ -34,9 +32,7 @@ class Game {
     return randPhrase;
   }
 
-  /*startGame(): method that hides the start screen overlay, sets the activePhrase property to a random phrase.
-                It also adds that phrase to the board by calling the addPhraseToDisplay() method
-                    on the active Phrase object.*/
+  /*startGame(): method that hides the start screen overlay, sets the activePhrase property to a random phrase.*/
   startGame() {
     $('#overlay').hide(); //hide the start screen
     const newPhrase = new Phrase(this.getRandomPhrase().phrase); //create a selected phrase
@@ -44,8 +40,7 @@ class Game {
     newPhrase.addPhraseToDisplay(); // add the selected phrase to display
   }
 
-  /*checkForWin(): this method checks to see if the player has revealed all of the letters in the active phrase.
-   */
+  /*checkForWin(): this method checks to see if the player has revealed all of the letters in the active phrase.*/
   checkForWin() {
     let checkWin = false; // array of collection of letter class in elemnt 'li'
     if ($('li.letter').length === 0) { // $('li.show.letter'): array of objects which match to li has classes are show and letter
@@ -57,9 +52,7 @@ class Game {
   }
 
   /*removeLife(): this method removes a life from the scoreboard, by replacing one of the liveHeart.png images with a lostHeart.png
-          image (found in the images folder) and increments the missed property.
-          If the player has five missed guesses (i.e they're out of lives), then end the game by calling the gameOver() method.
-  */
+          image (found in the images folder) and increments the missed property by 1.*/
   removeLife() {
     const score = $('#scoreboard img[src$="liveHeart.png"]'); // get all scores
     score.first().attr('src', 'images/lostHeart.png'); // lost a point when missed
@@ -100,14 +93,13 @@ class Game {
         - If the phrase includes the guessed letter, add the "CHOSEN" CSS class to the selected letter's keyboard button,
             call the showMatchedLetter() method on the phrase, and then
             call the checkForWin() method.
-        - If the player has won the game, also call the gameOver() method.
+        - If the player has won/lost the game, also call the gameOver() method.
 
   */
    handleInteraction(button) { //button is an object element of jquery Objects <button...>...</button>
      const selectedAnswer = button.innerText; // get content of selected button
      // if wrong answer
      if (!this.activePhrase.checkLetter(selectedAnswer)){// if the cliked button is not matched with  any letter of the active phrase
-//        console.log("wrong");
        $(button).addClass('wrong'); //add wrong class from css to selected key
        $(button).attr('disabled', 'disabled');  // disabled the selected key
        this.removeLife(); // change liveHeart to lostHeart
@@ -118,7 +110,6 @@ class Game {
      }
      // if correct answer
      else{
-//        console.log("correct");
        this.activePhrase.showMatchedLetter(selectedAnswer);
        $(button).attr('disabled', '');
        $(button).addClass('chosen');
@@ -127,6 +118,5 @@ class Game {
          this.gameOver(true);
        }
      }
-     // console.log(button);
   }
 }
