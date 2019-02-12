@@ -42,8 +42,6 @@ class Game {
     const newPhrase = new Phrase(this.getRandomPhrase().phrase); //create a selected phrase
     this.activePhrase = newPhrase; //store the selected phrase in activePhrase property
     newPhrase.addPhraseToDisplay(); // add the selected phrase to display
-    let startAudio = new Audio('start.mp3');
-    // startAudio.play();
   }
 
   /*checkForWin(): this method checks to see if the player has revealed all of the letters in the active phrase.
