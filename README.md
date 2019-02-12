@@ -2,10 +2,13 @@
 # Nguyen Pham
 # OOP Game Show App
 
-***Understand the rules of the game:
-  The player’s goal is to guess all the letters in a hidden, random phrase. At the beginning, the player only sees the number of letters and words in the phrase, represented by blank boxes on the screen.
-  The player clicks an onscreen keyboard to guess letters in the phrase.
-  The letter is disabled on the onscreen keyboard and a player can't select that letter again.
-  If the selected letter is in the phrase at least once, the letter and its position in the phrase is highlighted on screen.  All instances of the letter are made visible (so if there are 3 A's, all of the A's in the phrase appear at once).
-  If the selected letter is not in the phrase, one of the player's hearts in the scoreboard is changed from a "live" heart to a "lost" heart.
-  The player keeps choosing letters until they reveal all the letters in the phrase, or they make five incorrect guesses.
+# Meet Expecation
+
+The phrase will be hidden at first when starting the game
+The player will click on key of screen keyboard for the answer.
+When the key is clicked, it can't reselect.
+If the correct key selected, the key's color will be changed to dark color and the heart is not changed. By the time, the correct letter(s) will visible on screen
+It the wrong key selected, the key's color will be changed to ligt color and the heart is reduced one and changed to grey
+If getting all letters in the phrase, the player will win.
+If all heart change to grey, the player will lose.
+Finally, he/she can restart the game by clicking on start game button
