@@ -5,6 +5,7 @@
 # Exceeds Expectations
 
 A player can type either on physical keyboard or click on screen keyboard
+Open Browser Inspect to see the answered phrase
 The phrase will be hidden at first when starting the game
 The player will click on key of screen keyboard for the answer.
 When a key is clicked, it can't reselect.
