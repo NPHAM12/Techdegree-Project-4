@@ -36,12 +36,10 @@ class Phrase {
   /* showMatchedLetter(char): method which reveals the letter(s) on the board that matches the player's selection*/
   showMatchedLetter(char) {
     const arrLi = document.querySelectorAll('#phrase li');
-    const correctAudio = new Audio('correct.mp3'); //create variable audio.Its property is correct.mp3
     arrLi.forEach(li => { // Iteration in array LI
       if (li.textContent === char) {//if text content of an index is matched to selected char
         li.classList.remove('hide', 'letter', char);  //remove old class attributes
         li.classList.add('show', 'bounce', char); //add new class attributes
-        // correctAudio.play(); //play audio
       }
     });
   }
