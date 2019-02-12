@@ -23,7 +23,7 @@ class Game {
       }];
 
     /*  activePhrase: This is the Phrase object that’s currently in play. The initial value is null.
-    this.activePhrase = null;
+    this.activePhrase = null;*/
   }
 
   /*getRandomPhrase(): method that randomly retrieves one phrase from the phrases array.*/
