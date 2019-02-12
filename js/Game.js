@@ -7,8 +7,8 @@ class Game {
   constructor() {
     //missed: used to track the number of missed guesses by the player
     this.missed = 0;
-    phrases: property set to an array of five Phrase objects to use with the game
-    Phrases added to the game only include letters and spaces
+    // phrases: property set to an array of five Phrase objects to use with the game
+    // phrases added to the game only include letters and spaces
     this.phrases = [{
       phrase: "a bird in the hand is worth two in the bush",
       }, {
