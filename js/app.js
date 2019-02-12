@@ -12,7 +12,7 @@ $('#btn__reset').on('click', function() {
   console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
 });
 
-// action click a key on keyboard
+// action click a key on the screen keyboard
   $('button.key').on('click', function(e){
     game.handleInteraction(e.target);     // get Object element e.target (<button .....>...</button>) to be an argument in handleInteraction();
   });
