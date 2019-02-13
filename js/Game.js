@@ -8,7 +8,7 @@ class Game {
     //missed: used to track the number of missed guesses by the player
     this.missed = 0;
     // phrases: property set to an array of five Phrase objects to use with the game
-    // phrases added to the game only include letters and spaces
+    // Phrases added to the game only include letters and spaces
     this.phrases = [{
       phrase: "a bird in the hand is worth two in the bush",
       }, {
@@ -86,6 +86,7 @@ class Game {
       screen.style.display = "";
       screen.className = "lose";
       $('#game-over-message').text("Sorry, better luck next time!");
+      $('h2.title').hide();
     }
     //if win
     if (cond === true) {
